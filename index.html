@@ -1,0 +1,83 @@
+<Html>
+<script type="text/javascript">
+function clock() {
+var d = new Date();
+var month_num = d.getMonth()
+var day = d.getDate();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
+month=new Array("января", "февраля", "марта", "апреля", "мая", "июня",
+"июля", "августа", "сентября", "октября", "ноября", "декабря");
+if (day <= 9) day = "0" + day;
+if (hours <= 9) hours = "0" + hours;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+date_time = "Сегодня - " + day + " " + month[month_num] + " " + d.getFullYear() +
+" г.&nbsp;&nbsp;&nbsp;Текущее время - "+ hours + ":" + minutes + ":" + seconds;
+if (document.layers) {
+document.layers.doc_time.document.write(date_time);
+document.layers.doc_time.document.close();
+}
+else document.getElementById("doc_time").innerHTML = date_time;
+setTimeout("clock()", 1000);
+}
+</script>
+<span id="doc_time">
+Дата и время
+</span>
+<script type="text/javascript">
+clock();
+</script>
+<Head>
+<Title>Sankina 1495б</title>
+<link rel="stylesheet" href="style.css"
+</head>
+<Body tomargin="100" Bottommargin="100" rightmargin="100" leftmargin="100" bgcolor="#B0C4DE">
+<h1>Обо Мне</h1>
+Санкина Виктория Александровна
+<br>
+Студентка 3 курса ИЦЭ
+<br>
+Группа 1495б
+<br>
+<br><br>
+<ul>
+<li><a href="img 1">Изображение 1</a></li>
+<li><a href="img 2">Изображение 2</a></li>
+<li><a href="img 3">Изображение 3</a></li>
+<li><a href="#footer-a">Vk</a></li>
+<li><a href="#footer-b">Instagram</a></li>
+</ul>
+<table border="5" bordercolor="black" cellpadding="10">
+<tr>
+<td>
+<div id="img 1" align="middle">
+<img src="img 1.jpg" height="60%" width="60%">
+<p>Изображение 1</p>
+</div>
+</td>
+<td>
+<div id="img 2" align="middle">
+<img src="img 2.jpg" height="60%" width="60%">
+<p>Изображение 2</p>
+</div>
+</td>
+<td>
+<div id="img 3" align="middle">
+<img src="img 3.jpg" height="60%" width="60%">
+<p>Изображение 3</p>
+</div>
+</td>
+</tr>
+</table>
+<br><br>
+<footer>
+<a id="footer-a" href="https://vk.com/sankinaa">
+<img src="vk.png" height="50" width="50">
+<a id="footer-b" href="https://www.instagram.com/byviktorias/">
+<img src="inst.png" height="50" width="50">
+</a>
+</footer"
+</Body>
+</Html>
